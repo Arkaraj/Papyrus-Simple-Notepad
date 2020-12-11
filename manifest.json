@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Papyrus - Simple Notepad",
+    "description": "A simple Notepad for on the go. Easy to use notes for Chrome with sync functionality. Save text or data easily as you browse through the web",
+    "version": "1.0.0",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "browser_action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "unlimitedStorage"
+    ]
+}
