@@ -2,6 +2,7 @@
 
 let textfield = document.querySelector("#text");
 let notepad = document.querySelector(".notepad");
+let copyText = document.getElementById("far");
 //textfield.style.background = "#FFBDA3";
 let yellow = document.querySelector("#yellow");
 let blue = document.querySelector("#blue");
@@ -18,28 +19,33 @@ let clear = document.querySelector("#clear");
 yellow.addEventListener('click', () => {
     textfield.style.background = "#F7E999";
     textfield.style.color = "#4b453c";
+    copyText.style.color = "#4b453c";
     textfield.focus();
 });
 blue.addEventListener('click', () => {
     textfield.style.background = "#b9dcf4";
     textfield.style.color = "#4b453c";
+    copyText.style.color = "#4b453c";
     textfield.focus();
 });
 pink.addEventListener('click', () => {
     textfield.style.background = "#FFBDA3";
     textfield.style.color = "#4b453c";
+    copyText.style.color = "#4b453c";
     textfield.focus();
 });
 green.addEventListener('click', () => {
     textfield.style.background = "#00F993";
     //#CAF4B9
     textfield.style.color = "#4b453c";
+    copyText.style.color = "#4b453c";
     textfield.focus();
 });
 black.addEventListener('click', () => {
     textfield.style.background = "#3c4265";
     //rgba(61, 67, 102, 0.8)
     textfield.style.color = "#fff";
+    copyText.style.color = "#ffffff";
     textfield.focus();
 });
 bullet.addEventListener('click', () => {
@@ -61,8 +67,29 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 textfield.onfocus = function () {
-    var val = textfield.value; textfield.value = ''; textfield.value = val;
+    let val = textfield.value; textfield.value = ''; textfield.value = val;
 }
+
+//Clipboard
+
+let copy = document.querySelector(".copy");
+copyText.addEventListener('click', () => {
+    textfield.select();
+    textfield.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    if (textfield.value != '') {
+        copy.innerHTML = 'Copied!';
+    }
+});
+copyText.addEventListener('mouseover', () => {
+    copy.innerHTML = 'Copy';
+    copy.style.opacity = 1;
+});
+copyText.addEventListener('mouseout', () => {
+    copy.style.opacity = 0;
+});
+
+
 
 // Credits: LUCID for chrome storage api
 

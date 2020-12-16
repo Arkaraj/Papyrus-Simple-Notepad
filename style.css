@@ -21,6 +21,42 @@
     flex-direction: column;
 }
 
+i{
+    color: #fff;
+    transform: translate(210px, 50px);
+    z-index: 99;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.copy{
+    /* display: none; */
+    margin-top: -50px;
+    width: 170px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 6px;
+    /* position: absolute; */
+    z-index: 3;
+    opacity: 0;
+    /* transform: translate(207px, -330px); */
+    transform: translate(210px, 30px);
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+.copy::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 51.6%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
 textarea{
     min-width: 90%;
     max-width: 490px;
