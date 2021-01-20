@@ -1,5 +1,5 @@
 //Lots of variables to edit!!!
-
+//text.document.designMode = "On";
 let textfield = document.querySelector("#text");
 let notepad = document.querySelector(".notepad");
 let copyText = document.getElementById("far");
@@ -91,7 +91,7 @@ copyText.addEventListener('mouseout', () => {
 
 
 
-// Credits: LUCID for chrome storage api
+// Credits: LUCID for chrome storage method
 
 function updateStore(storeKey, data) {
     let obj = {};
@@ -115,7 +115,7 @@ function readStore(storeKey, cb) {
     // })
 }
 
-const key = "thjkljlkjkljrwl";
+const key = "thisisthelegitkeyforthisproject";
 
 let defaultData = {
     notepadContent: "",
@@ -233,4 +233,3 @@ function start(data) {
         }
     })
 }
-
